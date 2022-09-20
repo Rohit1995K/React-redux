@@ -1,5 +1,6 @@
+import logo from './logo.svg';
 import './App.css';
-import HomeContainer from './Containers/HomeContainer';
+import HomeContainer from './containers/HomeContainer';
 
 function App() {
   return (
