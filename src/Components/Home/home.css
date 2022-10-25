@@ -1,0 +1,10 @@
+.btnVal {
+    display: inline-block;
+    width:25px;
+    height: 25px;
+    border: 1px solid #555;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}

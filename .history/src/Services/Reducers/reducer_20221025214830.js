@@ -24,9 +24,10 @@ const cartSlice = createSlice({
             item.id !== itemId);
         },
         addToCart: (state, data) => {
-            const itemId = data.payload.id;
-            const itemCnt = data.payload.cnt;
-            state.cartItems = [...state.cartItems, {'id':itemId, 'cnt':itemCnt}];
+            console.log(data);
+            // const itemId = data.payload.id;
+            // const itemCnt = data.payload.cnt;
+            // state.cartItems = [...state.cartItems, {'id':itemId, 'cnt':itemCnt}];
         },
         removeFromCart: (state, action) => {
             const itemId = action.payload;

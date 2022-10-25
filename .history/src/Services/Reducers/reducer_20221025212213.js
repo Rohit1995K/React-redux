@@ -24,6 +24,7 @@ const cartSlice = createSlice({
             item.id !== itemId);
         },
         addToCart: (state, data) => {
+            console.log(data.payload.id);
             const itemId = data.payload.id;
             const itemCnt = data.payload.cnt;
             state.cartItems = [...state.cartItems, {'id':itemId, 'cnt':itemCnt}];

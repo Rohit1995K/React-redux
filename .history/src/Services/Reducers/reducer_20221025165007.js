@@ -1,14 +1,12 @@
 // import { ADD_TO_CART, REMOVE_FROM_CART } from "../Constant";
 import { createSlice } from "@reduxjs/toolkit";
-// import cardItems from "../../cartItems";
+import cardItems from "../../cartItems";
 
 const initialState = {
-    // cardData : cardItems,
-    cardData : [],
+    cardData : cardItems,
     amount:4,
     total:0,
-    isLoader:true,
-    cartItems:[]
+    isLoader:true
 }
 
 const cartSlice = createSlice({
@@ -23,14 +21,14 @@ const cartSlice = createSlice({
             state.cardData = state.cardData.filter((item) =>
             item.id !== itemId);
         },
-        addToCart: (state, data) => {
-            const itemId = data.payload.id;
-            const itemCnt = data.payload.cnt;
-            state.cartItems = [...state.cartItems, {'id':itemId, 'cnt':itemCnt}];
+        addToCart: (state, action) => {
+            const itemId = action.payload;
+            state.cardData = state.cardData.filter((item) =>
+            item.id !== itemId);
         },
         removeFromCart: (state, action) => {
             const itemId = action.payload;
-            state.cartItems = state.cartItems.filter((item) =>
+            state.cardData = state.cardData.filter((item) =>
             item.id !== itemId);
         },                
         increase: (state, {payload}) => {
@@ -44,5 +42,5 @@ const cartSlice = createSlice({
     }
 })
 
-export const { clearCart , removeItem, addToCart, removeFromCart} = cartSlice.actions;
+export const { clearCart , removeItem} = cartSlice.actions;
 export default cartSlice.reducer;

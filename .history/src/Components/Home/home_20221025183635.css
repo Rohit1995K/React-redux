@@ -1,0 +1,8 @@
+.btnVal {
+    width:8px;
+    height: 8px;
+    border: 1px solid #555;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+}

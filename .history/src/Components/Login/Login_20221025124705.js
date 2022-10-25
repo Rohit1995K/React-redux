@@ -1,0 +1,44 @@
+import React from "react";
+import './login.css';
+import { Card,CardBody,CardTitle,CardText,Button,Input,Form,FormGroup,Col } from "reactstrap";
+import { Link } from "react-router-dom";
+
+
+const Login = () => {
+
+    return (
+        <div className="container">
+        <div className="row">
+            <div className="offset-md-4 col-md-4">
+                <Card className="mt-5 p-5" color="dark" inverse>
+                    <CardBody>
+                        <CardTitle tag="h2">
+                            LOGIN
+                        </CardTitle>
+                        <CardText>
+                            With supporting text below as a natural lead-in to additional content.
+                            <Form>
+                                <FormGroup row>
+                                    <Col className="my-4">
+                                        <Input id="exampleEmail" name="email" placeholder="Email" type="email"/>
+                                    </Col>
+                                </FormGroup>
+                                <FormGroup row>
+                                    <Col className="mb-4">
+                                        <Input id="examplePassword" name="password" placeholder="Password" type="password"/>
+                                    </Col>
+                                </FormGroup>
+                            </Form>
+                        </CardText>
+                        <Button>
+                            LOGIN
+                        </Button>
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+        </div>
+    )
+}
+
+export default Login;
